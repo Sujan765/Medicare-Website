@@ -130,3 +130,34 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
 }
+/* ===== STATS ===== */
+.stats {
+    padding: 4rem 2rem;
+    background: white;
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #f8faff;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    color: var(--text-gray);
+    font-weight: 500;
+}
