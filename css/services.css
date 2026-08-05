@@ -48,3 +48,7 @@
     font-weight: bold;
     font-size: 14px;
 }
+
+.service-card:hover {
+    background: #e6eaed;
+}
