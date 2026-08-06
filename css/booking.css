@@ -1,0 +1,329 @@
+.booking-header-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    text-align: center;
+}
+
+.booking-header-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.booking-header-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.booking-header-section h1 i {
+    margin-right: 10px;
+}
+
+.booking-header-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.booking-form-section {
+    padding: 4rem 2rem;
+    background: #f8faff;
+}
+
+.booking-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#bookingForm {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-section-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.form-section-title h3 {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+}
+
+.form-section-title h3 i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.required {
+    color: #ef4444;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+.input-wrapper textarea + i {
+    top: 1.2rem;
+    transform: none;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 3rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.input-wrapper textarea {
+    padding-top: 1rem;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus,
+.input-wrapper textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
+}
+
+.input-wrapper input.error,
+.input-wrapper select.error,
+.input-wrapper textarea.error {
+    border-color: #ef4444;
+}
+
+.input-wrapper input.error:focus,
+.input-wrapper select.error:focus,
+.input-wrapper textarea.error:focus {
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: block;
+    min-height: 20px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0.5rem 0;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    accent-color: var(--primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-wrapper label {
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-gray);
+}
+
+.btn-submit {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    animation: scaleIn 0.3s ease;
+}
+
+.modal-icon {
+    font-size: 4rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.modal-content p {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+}
+
+.booking-summary {
+    background: #f8faff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.booking-summary p {
+    margin: 0.3rem 0;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.booking-summary strong {
+    color: var(--primary);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1024px) {
+    .booking-header-section h1 {
+        font-size: 2.3rem;
+    }
+    #bookingForm {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-header-section {
+        padding: 3rem 1.5rem;
+    }
+    .booking-header-section h1 {
+        font-size: 2rem;
+    }
+    .booking-header-section p {
+        font-size: 1rem;
+    }
+    .booking-form-section {
+        padding: 2rem 1rem;
+    }
+    #bookingForm {
+        padding: 1.5rem;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+    .form-section-title h3 {
+        font-size: 1.1rem;
+    }
+    .input-wrapper input,
+    .input-wrapper select,
+    .input-wrapper textarea {
+        padding: 0.7rem 1rem 0.7rem 2.8rem;
+        font-size: 0.95rem;
+    }
+    .modal-content {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    .modal-icon {
+        font-size: 3rem;
+    }
+    .booking-summary {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-header-section h1 {
+        font-size: 1.6rem;
+    }
+    #bookingForm {
+        padding: 1rem;
+    }
+    .input-wrapper input,
+    .input-wrapper select,
+    .input-wrapper textarea {
+        padding: 0.6rem 1rem 0.6rem 2.5rem;
+        font-size: 0.9rem;
+    }
+    .modal-content {
+        padding: 1.5rem;
+    }
+    .modal-icon {
+        font-size: 2.5rem;
+    }
+}
