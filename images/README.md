@@ -4,10 +4,10 @@
 A healthcare appointment booking website inspired by NHS design principles.
 
 ## Group Members
-- [Your Name] - Homepage
-- [Teammate 1] - Services Page
-- [Teammate 2] - Booking Page
-- [Teammate 3] - Contact Page
+- [Pradip sunar] - Homepage
+- [sujan bk] - Services Page
+- [Ranjit bisunke] - Booking Page
+- [Nirajan sunar] - Contact Page
 
 ## Technologies Used
 - HTML5
@@ -17,4 +17,4 @@ A healthcare appointment booking website inspired by NHS design principles.
 - localStorage
 
 ## Link to Repository
-https://github.com/yourusername/medicare-website
+https://github.com/Sujan765/Medicare-Website.git

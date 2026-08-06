@@ -4,4 +4,4 @@ $(document).ready(function() {
         var price = $(this).find("span").text();
         alert("You picked " + name + " - " + price);
     });
-});
+});a
