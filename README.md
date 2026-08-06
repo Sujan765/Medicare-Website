@@ -70,3 +70,5 @@ Medicare-Website/
 │ └── booking.js (Booking page JavaScript)
 ├── images/ (Image assets)
 └── README.md (Project documentation)
+**<img width="1536" height="1024" alt="ChatGPT Image Aug 6, 2026, 04_49_07 PM" src="https://github.com/user-attachments/assets/d3ec0ca3-6442-43eb-869e-0a1adfdc2549" />
+**
