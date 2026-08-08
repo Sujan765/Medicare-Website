@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-    
+    // Click effect on contact cards
     $('.contact-card').on('click', function() {
         var title = $(this).find('h3').text();
         var info = $(this).find('p').text();
         alert('📌 ' + title + ': ' + info);
     });
 
-    
+    // Form submission with validation and localStorage
     $('#contactForm').on('submit', function(e) {
         e.preventDefault();
 
@@ -45,7 +45,6 @@ $(document).ready(function() {
             return;
         }
 
-        
         var contactData = {
             name: name,
             email: email,
@@ -56,16 +55,24 @@ $(document).ready(function() {
 
         localStorage.setItem('contactMessage', JSON.stringify(contactData));
 
-        
         feedback
             .removeClass('error')
             .addClass('success')
             .html('✅ Thanks ' + name + '! Your message has been sent successfully.');
 
-        
         this.reset();
 
         console.log('Contact message saved:', JSON.parse(localStorage.getItem('contactMessage')));
     });
+
+    // NEW: Load saved data if exists
+    var savedContact = JSON.parse(localStorage.getItem('contactMessage'));
+    if (savedContact) {
+        console.log('Previously saved contact message:', savedContact);
+        $('#formFeedback')
+            .removeClass('error')
+            .addClass('success')
+            .html('📩 You have a previously saved message from ' + savedContact.name + '.');
+    }
 
 });
