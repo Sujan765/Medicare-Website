@@ -1,13 +1,12 @@
 $(document).ready(function() {
 
-    // Click effect on contact cards
     $('.contact-card').on('click', function() {
         var title = $(this).find('h3').text();
         var info = $(this).find('p').text();
         alert('📌 ' + title + ': ' + info);
     });
 
-    // Form submission with validation and localStorage
+    
     $('#contactForm').on('submit', function(e) {
         e.preventDefault();
 
@@ -65,7 +64,7 @@ $(document).ready(function() {
         console.log('Contact message saved:', JSON.parse(localStorage.getItem('contactMessage')));
     });
 
-    // NEW: Load saved data if exists
+    
     var savedContact = JSON.parse(localStorage.getItem('contactMessage'));
     if (savedContact) {
         console.log('Previously saved contact message:', savedContact);
