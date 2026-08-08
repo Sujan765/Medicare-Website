@@ -17,7 +17,7 @@
     margin-bottom: 40px;
 }
 
-/* NEW: Contact Cards Grid */
+
 .contact-details {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
