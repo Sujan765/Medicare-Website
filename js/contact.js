@@ -17,7 +17,6 @@ $(document).ready(function() {
         var message = $('#message').val().trim();
         var feedback = $('#formFeedback');
 
-    
         var errors = [];
 
         if (name === '') {
@@ -38,7 +37,6 @@ $(document).ready(function() {
             errors.push('Message is required');
         }
 
-        
         if (errors.length > 0) {
             feedback
                 .removeClass('success')
@@ -48,15 +46,26 @@ $(document).ready(function() {
         }
 
         
+        var contactData = {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+            timestamp: new Date().toLocaleString()
+        };
+
+        localStorage.setItem('contactMessage', JSON.stringify(contactData));
+
+        
         feedback
             .removeClass('error')
             .addClass('success')
-            .html('✅ Form submitted successfully!');
+            .html('✅ Thanks ' + name + '! Your message has been sent successfully.');
 
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Subject:', subject);
-        console.log('Message:', message);
+        
+        this.reset();
+
+        console.log('Contact message saved:', JSON.parse(localStorage.getItem('contactMessage')));
     });
 
 });
