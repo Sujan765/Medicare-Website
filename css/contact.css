@@ -16,3 +16,20 @@
     color: #555;
     margin-bottom: 40px;
 }
+
+/* NEW: Contact Cards Grid */
+.contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e8f0;
+    text-align: center;
+}
