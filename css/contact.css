@@ -101,7 +101,7 @@
     font-family: inherit;
 }
 
-/* NEW: Focus States */
+
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: #0066cc;
@@ -109,7 +109,7 @@
     box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.1);
 }
 
-/* NEW: Button Styles */
+
 .contact-form-wrapper button {
     background: #0066cc;
     color: white;
@@ -130,7 +130,7 @@
     box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
 }
 
-/* NEW: Feedback Messages */
+
 #formFeedback {
     margin-top: 18px;
     padding: 12px;
@@ -151,7 +151,7 @@
     border: 1px solid #f5c6cb;
 }
 
-/* NEW: Responsive Design */
+
 @media (max-width: 768px) {
     .contact-details {
         grid-template-columns: 1fr 1fr;
