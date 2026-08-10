@@ -22,53 +22,60 @@
 
     <main>
         <section class="hero-section">
-            <h1>Contact Us</h1>
-            <p>We're here to help. Get in touch with us.</p>
+            <div class="hero-overlay">
+                <h1>Get in Touch</h1>
+                <p>We're here to support you every step of the way.</p>
+                <p class="hero-tagline">📞 0800 123 4567 • 24/7 Support</p>
+            </div>
         </section>
 
         <section class="contact-section">
-            
             <div class="contact-details">
                 <div class="contact-card">
-                    <span>📞</span>
+                    <div class="icon-circle">📞</div>
                     <h3>Phone</h3>
                     <p>0800 123 4567</p>
+                    <span class="contact-label">Available 24/7</span>
                 </div>
                 <div class="contact-card">
-                    <span>📧</span>
+                    <div class="icon-circle">📧</div>
                     <h3>Email</h3>
                     <p>info@nhsmedicare.co.uk</p>
+                    <span class="contact-label">We reply within 24h</span>
                 </div>
                 <div class="contact-card">
-                    <span>📍</span>
+                    <div class="icon-circle">📍</div>
                     <h3>Address</h3>
-                    <p>123 Health Street, London, UK</p>
+                    <p>123 Health Street</p>
+                    <span class="contact-label">London, UK</span>
                 </div>
                 <div class="contact-card">
-                    <span>🕒</span>
+                    <div class="icon-circle">🕒</div>
                     <h3>Opening Hours</h3>
-                    <p>Mon-Fri: 8:00 AM - 8:00 PM</p>
+                    <p>Mon–Fri: 8:00 AM – 8:00 PM</p>
+                    <span class="contact-label">Sat–Sun: Closed</span>
                 </div>
             </div>
 
             <div class="contact-form-wrapper">
                 <h2>Send Us a Message</h2>
+                <p class="form-subtitle">We’ll get back to you as soon as possible.</p>
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Your full name" required>
+                        <input type="text" id="name" placeholder="e.g. John Smith" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="Your email address" required>
+                        <input type="email" id="email" placeholder="e.g. john@example.com" required>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" placeholder="Subject of your message" required>
+                        <input type="text" id="subject" placeholder="What’s this about?" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
+                        <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
                     </div>
                     <button type="submit">Send Message</button>
                 </form>
