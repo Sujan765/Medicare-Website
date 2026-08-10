@@ -11,6 +11,21 @@
     justify-content: center;
 }
 
+.hero-overlay {
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-overlay h1 {
     font-size: 48px;
     font-weight: 700;
@@ -29,6 +44,22 @@
     margin-top: 12px;
     opacity: 0.8;
     font-weight: 300;
+}
+
+.hero-quote {
+    font-size: 22px;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.95;
+    margin-top: 4px;
+}
+
+.hero-values {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-top: 16px;
+    letter-spacing: 2px;
 }
 
 .contact-section {
@@ -51,9 +82,27 @@
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     border: 1px solid #edf2f7;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
     text-align: center;
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+}
+
+.contact-card:nth-child(1) { animation-delay: 0.1s; }
+.contact-card:nth-child(2) { animation-delay: 0.2s; }
+.contact-card:nth-child(3) { animation-delay: 0.3s; }
+.contact-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-card:hover {
@@ -71,12 +120,19 @@
     border-radius: 50%;
     font-size: 32px;
     margin: 0 auto 14px auto;
-    transition: 0.3s;
+    transition: 0.4s ease;
 }
 
 .contact-card:hover .icon-circle {
     background: #0066cc;
     color: white;
+    animation: pulse 0.8s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
 }
 
 .contact-card h3 {
@@ -146,7 +202,7 @@
     border: 2px solid #e2e8f0;
     border-radius: 10px;
     font-size: 16px;
-    transition: 0.3s ease;
+    transition: all 0.4s ease;
     font-family: inherit;
     background: #fafbfc;
 }
@@ -155,8 +211,8 @@
 .form-group textarea:focus {
     border-color: #0066cc;
     outline: none;
-    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.08);
-    background: white;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.15);
+    transform: scale(1.01);
 }
 
 .contact-form-wrapper button {
@@ -168,7 +224,7 @@
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     width: 100%;
     margin-top: 6px;
     letter-spacing: 0.3px;
@@ -176,8 +232,8 @@
 
 .contact-form-wrapper button:hover {
     background: #004d99;
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.25);
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0, 102, 204, 0.35);
 }
 
 #formFeedback {
@@ -186,6 +242,18 @@
     border-radius: 10px;
     text-align: center;
     font-weight: 500;
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .success {
