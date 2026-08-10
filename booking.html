@@ -1,259 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NHS Medicare - Book Appointment</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/booking.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Book Appointment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css">
 </head>
 <body>
-
-<<<<<<< HEAD
-   
-=======
-    
->>>>>>> 172826f8232a9a6bd90846f20066d40b2d39ecf2
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <i class="fas fa-heartbeat"></i>
-                    <span>NHS Medicare</span>
-                </a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="services.html"><i class="fas fa-stethoscope"></i> Services</a></li>
-                <li><a href="booking.html" class="active"><i class="fas fa-calendar-check"></i> Booking</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    <header>
+        <nav>
+            <div class="logo">🏥 NHS Medicare</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html" class="active">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    
-    <section class="booking-header-section">
-        <div class="booking-header-container">
-            <h1><i class="fas fa-calendar-check"></i> Book an Appointment</h1>
-            <p>Fill in the form below to schedule your appointment with one of our expert doctors.</p>
-        </div>
-    </section>
+    <main>
+        <section class="booking-hero">
+            <div class="booking-hero-overlay">
+                <h1>Book Your Appointment</h1>
+                <p>Quick, easy, and secure. We're here to help you.</p>
+            </div>
+        </section>
 
-
-    <section class="booking-form-section">
-        <div class="booking-form-container">
-            <form id="bookingForm" novalidate>
-
-                
-                <div class="form-section-title">
-                    <h3><i class="fas fa-user"></i> Personal Information</h3>
-                </div>
-
-                <div class="form-row">
+        <section class="booking-section">
+            <div class="booking-form-wrapper">
+                <h2>Fill in Your Details</h2>
+                <p class="form-subtitle">We'll confirm your appointment within 24 hours.</p>
+                <form id="bookingForm">
                     <div class="form-group">
-                        <label for="fullName">Full Name <span class="required">*</span></label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-user"></i>
-                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
-                        </div>
-                        <span class="error-message" id="fullNameError"></span>
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="e.g. John Smith" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-envelope"></i>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required />
-                        </div>
-                        <span class="error-message" id="emailError"></span>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="e.g. john@example.com" required>
                     </div>
-                </div>
-
-                <div class="form-row">
                     <div class="form-group">
-                        <label for="phone">Phone Number <span class="required">*</span></label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-phone"></i>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
-                        </div>
-                        <span class="error-message" id="phoneError"></span>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="e.g. 07900 123456" required>
                     </div>
-
                     <div class="form-group">
-                        <label for="dob">Date of Birth <span class="required">*</span></label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-calendar-day"></i>
-                            <input type="date" id="dob" name="dob" required />
-                        </div>
-                        <span class="error-message" id="dobError"></span>
+                        <label for="service">Select Service</label>
+                        <select id="service" required>
+                            <option value="">Choose a service...</option>
+                            <option value="GP Services">🩺 GP Services</option>
+                            <option value="Dental Services">🦷 Dental Services</option>
+                            <option value="Mental Health">🧠 Mental Health</option>
+                            <option value="Vaccinations">💉 Vaccinations</option>
+                            <option value="Eye Care">👁️ Eye Care</option>
+                            <option value="Emergency">🏥 Emergency</option>
+                        </select>
                     </div>
-                </div>
-
-                < <div class="form-section-title">
-                    <h3><i class="fas fa-calendar-alt"></i> Appointment Details</h3>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="serviceType">Select Service <span class="required">*</span></label>
-              
-                       <div class="input-wrapper">
-                            <i class="fas fa-stethoscope"></i>
-                            <select id="serviceType" name="serviceType" required>
-                                <option value="">Choose a service</option>
-                                <option value="general">General Checkup</option>
-                                <option value="dental">Dental Care</option>
-                                <option value="cardiology">Cardiology</option>
-                                <option value="neurology">Neurology</option>
-                                <option value="pediatrics">Pediatrics</option>
-                                <option value="dermatology">Dermatology</option>
-                                <option value="orthopedics">Orthopedics</option>
-                                <option value="mental-health">Mental Health</option>
-                            </select>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" required>
                         </div>
-                        <span class="error-message" id="serviceError"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="appointmentDate">Appointment Date <span class="required">*</span></label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-calendar-alt"></i>
-                            <input type="date" id="appointmentDate" name="appointmentDate" required />
-                        </div>
-                        <span class="error-message" id="dateError"></span>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="appointmentTime">Preferred Time <span class="required">*</span></label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-clock"></i>
-                            <select id="appointmentTime" name="appointmentTime" required>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time" required>
                                 <option value="">Select time</option>
                                 <option value="09:00">09:00 AM</option>
                                 <option value="10:00">10:00 AM</option>
                                 <option value="11:00">11:00 AM</option>
-                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">01:00 PM</option>
                                 <option value="14:00">02:00 PM</option>
                                 <option value="15:00">03:00 PM</option>
                                 <option value="16:00">04:00 PM</option>
                                 <option value="17:00">05:00 PM</option>
                             </select>
                         </div>
-                        <span class="error-message" id="timeError"></span>
                     </div>
-
                     <div class="form-group">
-                        <label for="doctorPreference">Doctor Preference</label>
-                        <div class="input-wrapper">
-                            <i class="fas fa-user-md"></i>
-                            <select id="doctorPreference" name="doctorPreference">
-                                <option value="">No preference</option>
-                                <option value="dr-smith">Dr. Smith</option>
-                                <option value="dr-johnson">Dr. Johnson</option>
-                                <option value="dr-williams">Dr. Williams</option>
-                                <option value="dr-brown">Dr. Brown</option>
-                                <option value="dr-davis">Dr. Davis</option>
-                            </select>
-                        </div>
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" rows="3" placeholder="Any special requirements..."></textarea>
                     </div>
-                </div>
-
-                
-                <div class="form-group full-width">
-                    <label for="symptoms">Brief Description of Symptoms</label>
-                    <div class="input-wrapper">
-                        <i class="fas fa-notes-medical"></i>
-                        <textarea id="symptoms" name="symptoms" rows="4" placeholder="Describe your symptoms or reason for visit"></textarea>
-                    </div>
-                </div>
-
-               
-                <div class="form-group full-width">
-                    <div class="checkbox-wrapper">
-                        <input type="checkbox" id="terms" name="terms" required />
-                        <label for="terms">I agree to the Terms and Conditions and confirm that the information provided is accurate <span class="required">*</span></label>
-                    </div>
-                    <span class="error-message" id="termsError"></span>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-submit">
-                    <i class="fas fa-check-circle"></i> Book Appointment
-                </button>
-
-            </form>
-        </div>
-    </section>
-
-    
-    <div id="successModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <div class="modal-icon">
-                <i class="fas fa-check-circle"></i>
+                    <button type="submit">Book Appointment</button>
+                </form>
+                <div id="formFeedback"></div>
             </div>
-            <h2>Appointment Booked Successfully</h2>
-            <p>Your appointment has been confirmed. A confirmation email has been sent to your registered email address.</p>
-            <div id="bookingSummary" class="booking-summary"></div>
-            <button class="btn btn-primary" onclick="closeBookingModal()">
-                <i class="fas fa-home"></i> Return to Home
-            </button>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer role="contentinfo">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <h3><i class="fas fa-heartbeat"></i> NHS Medicare</h3>
-                    <p>Committed to providing quality healthcare services to our community with compassion and excellence.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="booking.html">Book Appointment</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> 0800 123 4567</li>
-                        <li><i class="fas fa-envelope"></i> info@nhsmedicare.com</li>
-                        <li><i class="fas fa-location-dot"></i> 123 Healthcare St, London, UK</li>
-                    </ul>
-                </div>
-                <div class="footer-hours">
-                    <h4>Opening Hours</h4>
-                    <ul>
-                        <li>Mon - Fri: 8:00 AM - 8:00 PM</li>
-                        <li>Saturday: 9:00 AM - 5:00 PM</li>
-                        <li>Sunday: 10:00 AM - 4:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NHS Medicare. All rights reserved.</p>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2026 NHS Medicare</p>
     </footer>
 
-    <script src="js/home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/booking.js"></script>
 </body>
 </html>
