@@ -55,22 +55,6 @@ The main purpose of this project is to provide a user-friendly digital platform 
 - contact-page-Nirajan - Contact page development branch
 
 ## Project Structure
-Medicare-Website/
-├── index.html (Home Page)
-├── services.html (Services Page)
-├── booking.html (Booking Page)
-├── contact.html (Contact Page)
-├── css/
-│ ├── style.css (Global styles)
-│ ├── home.css (Home page styles)
-│ ├── services.css (Services page styles)
-│ └── booking.css (Booking page styles)
-├── js/
-│ ├── script.js (Global JavaScript)
-│ ├── home.js (Home page JavaScript)
-│ ├── services.js (Services page JavaScript)
-│ └── booking.js (Booking page JavaScript)
-├── images/ (Image assets)
-└── README.md (Project documentation)
+
 **<img width="1536" height="1024" alt="ChatGPT Image Aug 6, 2026, 04_49_07 PM" src="https://github.com/user-attachments/assets/d3ec0ca3-6442-43eb-869e-0a1adfdc2549" />
 **
