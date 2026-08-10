@@ -22,6 +22,8 @@ The main purpose of this project is to provide a user-friendly digital platform 
 - JavaScript (Form validation, DOM manipulation)
 - jQuery (Click events, animations)
 - localStorage (Client-side data storage)
+- Git And Github
+- Visual Studio Code
 
 ## Features
 
@@ -36,10 +38,10 @@ The main purpose of this project is to provide a user-friendly digital platform 
 
 | Name | Role | Pages / Files |
 |------|------|---------------|
-| [Sujan Bk] | Services Page Developer | services.html, services.css, services.js |
-| [Pradip sunar] | Home Page Developer | index.html, home.css, home.js |
-| [Rnajit bisunke] | Booking Page Developer | booking.html, booking.css, booking.js |
-| [Nirajan sunar] | Contact + Integration | contact.html, style.css, script.js, README.md |
+| Sujan Bk | Services Page Developer | services.html, services.css, services.js |
+| Pradip sunar | Home Page Developer | index.html, home.css, home.js |
+| Rnajit bisunke | Booking Page Developer | booking.html, booking.css, booking.js |
+| Nirajan sunar | Contact + Integration | contact.html, style.css, script.js, README.md |
 
 ## Git Repository
 
