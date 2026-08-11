@@ -286,3 +286,206 @@ footer {
     text-align: center;
     color: #9ca3af;
 }
+
+/* ===== COOKIE CONSENT BANNER ===== */
+#cookieConsent {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1.5rem 2rem;
+    z-index: 9999;
+    border-top: 4px solid #0066CC;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+#cookieConsent .cookie-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#cookieConsent h3 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a2e;
+}
+
+#cookieConsent h3 i {
+    color: #0066CC;
+    margin-right: 10px;
+}
+
+#cookieConsent p {
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+#cookieConsent .cookie-buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#cookieConsent .btn-accept {
+    background: #0066CC;
+    color: white;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#cookieConsent .btn-accept:hover {
+    background: #004a99;
+}
+
+#cookieConsent .btn-decline {
+    background: transparent;
+    color: #0066CC;
+    border: 2px solid #0066CC;
+    padding: 0.7rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* ===== COOKIE CONSENT BANNER - LARGE VERSION ===== */
+#cookieConsent {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 2.5rem 3rem;
+    z-index: 9999;
+    border-top: 8px solid #0066CC;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.2);
+    font-family: 'Inter', sans-serif;
+}
+
+#cookieConsent .cookie-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#cookieConsent h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a2e;
+}
+
+#cookieConsent h3 i {
+    color: #0066CC;
+    margin-right: 15px;
+    font-size: 2.5rem;
+}
+
+#cookieConsent p {
+    font-size: 1.4rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    line-height: 2;
+}
+
+#cookieConsent .cookie-buttons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#cookieConsent .btn-accept {
+    background: #0066CC;
+    color: white;
+    border: none;
+    padding: 1.2rem 3.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.4);
+}
+
+#cookieConsent .btn-accept:hover {
+    background: #004a99;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 102, 204, 0.5);
+}
+
+#cookieConsent .btn-decline {
+    background: transparent;
+    color: #0066CC;
+    border: 3px solid #0066CC;
+    padding: 1.2rem 3.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+#cookieConsent .btn-decline:hover {
+    background: #e6f0ff;
+    transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    #cookieConsent {
+        padding: 2rem 1.5rem;
+    }
+    
+    #cookieConsent h3 {
+        font-size: 1.6rem;
+    }
+    
+    #cookieConsent h3 i {
+        font-size: 1.8rem;
+    }
+    
+    #cookieConsent p {
+        font-size: 1.1rem;
+    }
+    
+    #cookieConsent .cookie-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    #cookieConsent .btn-accept,
+    #cookieConsent .btn-decline {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #cookieConsent {
+        padding: 1.5rem 1rem;
+    }
+    
+    #cookieConsent h3 {
+        font-size: 1.3rem;
+    }
+    
+    #cookieConsent p {
+        font-size: 0.95rem;
+    }
+    
+    #cookieConsent .btn-accept,
+    #cookieConsent .btn-decline {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
