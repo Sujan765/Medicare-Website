@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary: #0066CC;
+    --primary: #0066CC; /* Updated */   
     --primary-dark: #004a99;
     --primary-light: #e6f0ff;
     --secondary: #00a884;
@@ -286,75 +286,7 @@ footer {
     text-align: center;
     color: #9ca3af;
 }
-
-/* ===== COOKIE CONSENT BANNER ===== */
-#cookieConsent {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: white;
-    padding: 1.5rem 2rem;
-    z-index: 9999;
-    border-top: 4px solid #0066CC;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
-    font-family: 'Inter', sans-serif;
-}
-
-#cookieConsent .cookie-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#cookieConsent h3 {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #1a1a2e;
-}
-
-#cookieConsent h3 i {
-    color: #0066CC;
-    margin-right: 10px;
-}
-
-#cookieConsent p {
-    margin-bottom: 1rem;
-    color: #4b5563;
-}
-
-#cookieConsent .cookie-buttons {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#cookieConsent .btn-accept {
-    background: #0066CC;
-    color: white;
-    border: none;
-    padding: 0.7rem 2rem;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-#cookieConsent .btn-accept:hover {
-    background: #004a99;
-}
-
-#cookieConsent .btn-decline {
-    background: transparent;
-    color: #0066CC;
-    border: 2px solid #0066CC;
-    padding: 0.7rem 2rem;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-/* ===== COOKIE CONSENT BANNER - LARGE VERSION ===== */
+/* ===== COOKIE CONSENT BANNER - EXTRA LARGE ===== */
 #cookieConsent {
     display: none;
     position: fixed;
@@ -362,42 +294,51 @@ footer {
     left: 0;
     width: 100%;
     background: #ffffff;
-    padding: 2.5rem 3rem;
+    padding: 3rem 4rem;
     z-index: 9999;
-    border-top: 8px solid #0066CC;
-    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.2);
+    border-top: 10px solid #0066CC;
+    box-shadow: 0 -10px 50px rgba(0, 0, 0, 0.25);
     font-family: 'Inter', sans-serif;
 }
 
 #cookieConsent .cookie-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
+#cookieConsent .cookie-icon {
+    font-size: 3rem;
+    color: #0066CC;
+    margin-right: 20px;
+}
+
 #cookieConsent h3 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
     color: #1a1a2e;
+    display: flex;
+    align-items: center;
 }
 
 #cookieConsent h3 i {
     color: #0066CC;
-    margin-right: 15px;
-    font-size: 2.5rem;
+    margin-right: 20px;
+    font-size: 3.2rem;
 }
 
 #cookieConsent p {
-    font-size: 1.4rem;
-    color: #4b5563;
+    font-size: 1.8rem;
+    color: #2d3748;
     margin-bottom: 2rem;
-    max-width: 900px;
-    line-height: 2;
+    max-width: 1000px;
+    line-height: 2.2;
+    font-weight: 500;
 }
 
 #cookieConsent .cookie-buttons {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -406,67 +347,116 @@ footer {
     background: #0066CC;
     color: white;
     border: none;
-    padding: 1.2rem 3.5rem;
-    border-radius: 50px;
+    padding: 1.5rem 4.5rem;
+    border-radius: 60px;
     cursor: pointer;
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 800;
+    font-size: 1.8rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.4);
+    box-shadow: 0 6px 25px rgba(0, 102, 204, 0.5);
+    letter-spacing: 0.5px;
 }
 
 #cookieConsent .btn-accept:hover {
     background: #004a99;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(0, 102, 204, 0.5);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 40px rgba(0, 102, 204, 0.6);
 }
 
 #cookieConsent .btn-decline {
     background: transparent;
     color: #0066CC;
-    border: 3px solid #0066CC;
-    padding: 1.2rem 3.5rem;
-    border-radius: 50px;
+    border: 4px solid #0066CC;
+    padding: 1.5rem 4.5rem;
+    border-radius: 60px;
     cursor: pointer;
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 800;
+    font-size: 1.8rem;
     transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 #cookieConsent .btn-decline:hover {
     background: #e6f0ff;
-    transform: translateY(-3px);
+    transform: translateY(-4px) scale(1.02);
+}
+
+#cookieConsent .cookie-settings-link {
+    color: #0066CC;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#cookieConsent .cookie-settings-link:hover {
+    color: #004a99;
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    #cookieConsent {
+        padding: 2.5rem 2rem;
+    }
+    
+    #cookieConsent h3 {
+        font-size: 2.2rem;
+    }
+    
+    #cookieConsent h3 i {
+        font-size: 2.5rem;
+    }
+    
+    #cookieConsent p {
+        font-size: 1.4rem;
+    }
+    
+    #cookieConsent .btn-accept,
+    #cookieConsent .btn-decline {
+        padding: 1.2rem 3rem;
+        font-size: 1.4rem;
+    }
+}
+
 @media (max-width: 768px) {
     #cookieConsent {
         padding: 2rem 1.5rem;
     }
     
     #cookieConsent h3 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+        flex-wrap: wrap;
     }
     
     #cookieConsent h3 i {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     #cookieConsent p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        line-height: 1.8;
     }
     
     #cookieConsent .cookie-buttons {
         flex-direction: column;
         align-items: stretch;
+        gap: 1.5rem;
     }
     
     #cookieConsent .btn-accept,
     #cookieConsent .btn-decline {
         width: 100%;
         text-align: center;
-        padding: 1rem 2rem;
+        padding: 1.2rem 2rem;
+        font-size: 1.3rem;
+    }
+    
+    #cookieConsent .cookie-settings-link {
         font-size: 1.2rem;
+        text-align: center;
+        margin-left: 0;
     }
 }
 
@@ -476,16 +466,26 @@ footer {
     }
     
     #cookieConsent h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+    
+    #cookieConsent h3 i {
+        font-size: 1.6rem;
     }
     
     #cookieConsent p {
-        font-size: 0.95rem;
+        font-size: 1rem;
+        line-height: 1.6;
     }
     
     #cookieConsent .btn-accept,
     #cookieConsent .btn-decline {
+        font-size: 1.1rem;
+        padding: 1rem 1.5rem;
+    }
+    
+    #cookieConsent .cookie-settings-link {
         font-size: 1rem;
-        padding: 0.8rem 1.5rem;
     }
 }
+
