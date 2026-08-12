@@ -1,3 +1,4 @@
+
 .hero-section {
     background: linear-gradient(135deg, #0066cc, #004d99);
     padding: 60px 40px;
@@ -412,6 +413,23 @@
         height: 56px;
         line-height: 56px;
         font-size: 24px;
+    }
+
+    .faq-section h2 {
+        font-size: 28px;
+    }
+
+    .faq-question {
+        font-size: 15px;
+        padding: 14px 0;
+    }
+
+    .faq-item {
+        padding: 0 14px;
+    }
+
+    .faq-answer p {
+        font-size: 15px;
     }
 
     .faq-section h2 {

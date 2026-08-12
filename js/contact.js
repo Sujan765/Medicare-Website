@@ -75,4 +75,16 @@ $(document).ready(function() {
             .html('📩 You have a previously saved message from ' + savedContact.name + '.');
     }
 
+    
+    $('.faq-question').on('click', function() {
+        var parent = $(this).parent('.faq-item');
+
+        if (parent.hasClass('active')) {
+            parent.removeClass('active');
+        } else {
+            $('.faq-item').removeClass('active');
+            parent.addClass('active');
+        }
+    });
+
 });
