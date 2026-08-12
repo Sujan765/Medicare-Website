@@ -1,3 +1,6 @@
+/* ============================
+   HERO SECTION
+   ============================ */
 .hero-section {
     background: linear-gradient(135deg, #0066cc, #004d99);
     padding: 60px 40px;
@@ -67,7 +70,9 @@
     }
 }
 
-
+/* ============================
+   CONTACT CARDS
+   ============================ */
 .contact-section {
     max-width: 1200px;
     margin: 0 auto 50px auto;
@@ -163,7 +168,9 @@
     font-weight: 400;
 }
 
-
+/* ============================
+   FAQ SECTION
+   ============================ */
 .faq-section {
     max-width: 900px;
     margin: 0 auto 50px auto;
@@ -261,7 +268,9 @@
     text-decoration: underline;
 }
 
-
+/* ============================
+   CONTACT FORM
+   ============================ */
 .contact-form-wrapper {
     max-width: 650px;
     margin: 0 auto;
@@ -373,7 +382,9 @@
     border: 1px solid #f5c6cb;
 }
 
-
+/* ============================
+   RESPONSIVE
+   ============================ */
 @media (max-width: 768px) {
     .contact-details {
         grid-template-columns: 1fr 1fr;
