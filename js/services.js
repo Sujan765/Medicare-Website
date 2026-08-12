@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // ===== CLICK ALERT =====
+    
     $('.service-card').on('click', function(e) {
         if ($(e.target).is('.book-btn') || $(e.target).closest('.book-btn').length) return;
         var name = $(this).find('h3').text();
@@ -8,14 +8,14 @@ $(document).ready(function() {
         alert('✅ ' + name + ' - ' + price);
     });
 
-    // ===== BOOK NOW BUTTON =====
+    
     $('.book-btn').on('click', function(e) {
         e.stopPropagation();
         var service = $(this).closest('.service-card').find('h3').text();
         console.log('Booking initiated for: ' + service);
     });
 
-    // ===== ANIMATED COUNTERS =====
+    
     function animateCounters() {
         $('.stat-number').each(function() {
             var target = parseInt($(this).data('target'));
@@ -35,7 +35,7 @@ $(document).ready(function() {
         });
     }
 
-    // ===== SCROLL TRIGGER =====
+    
     var triggered = false;
     $(window).on('scroll', function() {
         if (!triggered) {
