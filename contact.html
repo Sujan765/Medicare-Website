@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🏥 NHS Medicare</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html">Book Appointment</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>We're here for you, day and night.</h1>
+                    <p class="hero-quote">"Your health matters to us. Every single day."</p>
+                </div>
+                <div class="hero-values-wrapper">
+                    <p class="hero-values">❤️ Compassion • 🤝 Respect • 🌟 Dignity</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT CARDS -->
+        <section class="contact-section">
+            <div class="contact-details">
+                <div class="contact-card">
+                    <div class="icon-circle">📞</div>
+                    <h3>Phone</h3>
+                    <p>0800 123 4567</p>
+                    <span class="contact-label">Available 24/7</span>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-circle">📧</div>
+                    <h3>Email</h3>
+                    <p>info@nhsmedicare.co.uk</p>
+                    <span class="contact-label">We reply within 24h</span>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-circle">📍</div>
+                    <h3>Address</h3>
+                    <p>123 Health Street</p>
+                    <span class="contact-label">London, UK</span>
+                </div>
+                <div class="contact-card">
+                    <div class="icon-circle">🕒</div>
+                    <h3>Opening Hours</h3>
+                    <p>Mon–Fri: 8:00 AM – 8:00 PM</p>
+                    <span class="contact-label">Sat–Sun: Closed</span>
+                </div>
+            </div>
+
+            <!-- ===== FAQ SECTION ===== -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <p class="faq-subtitle">Find quick answers to the most common questions our patients ask.</p>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I book an appointment?</span>
+                            <span class="faq-icon">➕</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can book an appointment online by visiting our <a href="booking.html">Booking Page</a> or by calling us at <strong>0800 123 4567</strong>. Our team is available 24/7 to assist you.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What services do you offer?</span>
+                            <span class="faq-icon">➕</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a wide range of services including GP services, dental care, mental health support, vaccinations, eye care, and emergency care. Visit our <a href="services.html">Services Page</a> for more details.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is my personal information secure?</span>
+                            <span class="faq-icon">➕</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, your personal information is fully secure and confidential. We follow strict NHS data protection guidelines and never share your information with third parties without your consent.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How much does a consultation cost?</span>
+                            <span class="faq-icon">➕</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Many of our services are NHS funded and completely free. For private services, prices are clearly displayed on our <a href="services.html">Services Page</a>. We believe in transparent pricing with no hidden costs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What if I need to cancel my appointment?</span>
+                            <span class="faq-icon">➕</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can cancel or reschedule your appointment by calling us at <strong>0800 123 4567</strong> at least 24 hours in advance. We understand that plans change and we're here to help.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form-wrapper">
+                <h2>Send Us a Message</h2>
+                <p class="form-subtitle">We'll get back to you as soon as possible.</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="e.g. John Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="e.g. john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="What's this about?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div id="formFeedback"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NHS Medicare</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>
