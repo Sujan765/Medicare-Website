@@ -1,6 +1,4 @@
-/* ============================
-   HERO SECTION — WITH IMAGE
-   ============================ */
+
 .hero-section {
     position: relative;
     background: linear-gradient(135deg, rgba(0, 51, 128, 0.75), rgba(0, 102, 204, 0.80)), url('../images/hero-bg.jpg') no-repeat center/cover;
@@ -135,9 +133,7 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================
-   SECTION HEADER
-   ============================ */
+
 .section-header {
     text-align: center;
     margin-bottom: 45px;
@@ -163,9 +159,7 @@
     color: #777;
 }
 
-/* ============================
-   SERVICES GRID — GLASSMORPHISM
-   ============================ */
+
 .services-section {
     max-width: 1200px;
     margin: 0 auto 50px auto;
@@ -274,9 +268,7 @@
     box-shadow: 0 6px 25px rgba(0, 102, 204, 0.3);
 }
 
-/* ============================
-   RESPONSIVE
-   ============================ */
+
 @media (max-width: 768px) {
     .services-grid {
         grid-template-columns: 1fr;
