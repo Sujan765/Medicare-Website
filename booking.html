@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Book Appointment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">NHS Medicare</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html" class="active">Book Appointment</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-hero">
+            <div class="booking-hero-overlay">
+                <h1>Book Your Appointment</h1>
+                <p>Quick, easy, and secure. We're here to help you.</p>
+                <div class="booking-hero-stats">
+                    <span>✅ 500+ Appointments Booked</span>
+                    <span>⭐ 4.9/5 Patient Rating</span>
+                    <span>🕒 24/7 Online Booking</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h2>Why Book Online?</h2>
+                    <ul>
+                        <li>✔ Skip the phone queue</li>
+                        <li>✔ Choose your preferred time</li>
+                        <li>✔ Get instant confirmation</li>
+                        <li>✔ Secure and confidential</li>
+                    </ul>
+                    <div class="booking-info-card">
+                        <p>📞 Need help? Call us at <strong>0800 123 4567</strong></p>
+                    </div>
+                </div>
+
+                <div class="booking-form-wrapper">
+                    <h2>Fill in Your Details</h2>
+                    <p class="form-subtitle">We'll confirm your appointment within 24 hours.</p>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="e.g. John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="e.g. john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="e.g. 07900 123456" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Select Service</label>
+                            <select id="service" required>
+                                <option value="">Choose a service...</option>
+                                <option value="GP Services">🩺 GP Services</option>
+                                <option value="Dental Services">🦷 Dental Services</option>
+                                <option value="Mental Health">🧠 Mental Health</option>
+                                <option value="Vaccinations">💉 Vaccinations</option>
+                                <option value="Eye Care">👁️ Eye Care</option>
+                                <option value="Emergency">🏥 Emergency</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <select id="time" required>
+                                    <option value="">Select time</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="13:00">01:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Additional Notes</label>
+                            <textarea id="notes" rows="3" placeholder="Any special requirements..."></textarea>
+                        </div>
+                        <button type="submit">Book Appointment</button>
+                    </form>
+                    <div id="formFeedback"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NHS Medicare</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>
