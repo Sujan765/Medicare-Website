@@ -1,78 +1,51 @@
 $(document).ready(function() {
 
     
-    $('.contact-card').on('click', function() {
-        var title = $(this).find('h3').text();
-        var info = $(this).find('p').text();
-        alert('📌 ' + title + ': ' + info);
+    $('.service-card').on('click', function(e) {
+        if ($(e.target).is('.book-btn') || $(e.target).closest('.book-btn').length) return;
+        var name = $(this).find('h3').text();
+        var price = $(this).find('.price-badge').text();
+        alert('✅ ' + name + ' - ' + price);
     });
 
     
-    $('#contactForm').on('submit', function(e) {
-        e.preventDefault();
-
-        var name = $('#name').val().trim();
-        var email = $('#email').val().trim();
-        var subject = $('#subject').val().trim();
-        var message = $('#message').val().trim();
-        var feedback = $('#formFeedback');
-
-        var errors = [];
-
-        if (name === '') {
-            errors.push('Full name is required');
-        }
-
-        if (email === '') {
-            errors.push('Email address is required');
-        } else if (!email.includes('@') || !email.includes('.')) {
-            errors.push('Please enter a valid email address');
-        }
-
-        if (subject === '') {
-            errors.push('Subject is required');
-        }
-
-        if (message === '') {
-            errors.push('Message is required');
-        }
-
-        if (errors.length > 0) {
-            feedback
-                .removeClass('success')
-                .addClass('error')
-                .html('❌ ' + errors.join('<br>'));
-            return;
-        }
-
-        var contactData = {
-            name: name,
-            email: email,
-            subject: subject,
-            message: message,
-            timestamp: new Date().toLocaleString()
-        };
-
-        localStorage.setItem('contactMessage', JSON.stringify(contactData));
-
-        feedback
-            .removeClass('error')
-            .addClass('success')
-            .html('✅ Thanks ' + name + '! Your message has been sent successfully.');
-
-        this.reset();
-
-        console.log('Contact message saved:', JSON.parse(localStorage.getItem('contactMessage')));
+    $('.book-btn').on('click', function(e) {
+        e.stopPropagation();
+        var service = $(this).closest('.service-card').find('h3').text();
+        console.log('Booking initiated for: ' + service);
     });
 
     
-    var savedContact = JSON.parse(localStorage.getItem('contactMessage'));
-    if (savedContact) {
-        console.log('Previously saved contact message:', savedContact);
-        $('#formFeedback')
-            .removeClass('error')
-            .addClass('success')
-            .html('📩 You have a previously saved message from ' + savedContact.name + '.');
+    function animateCounters() {
+        $('.stat-number').each(function() {
+            var target = parseInt($(this).data('target'));
+            var current = 0;
+            var increment = Math.ceil(target / 50);
+            var $this = $(this);
+
+            var timer = setInterval(function() {
+                current += increment;
+                if (current >= target) {
+                    $this.text(target + '+');
+                    clearInterval(timer);
+                } else {
+                    $this.text(current);
+                }
+            }, 30);
+        });
     }
+
+    
+    var triggered = false;
+    $(window).on('scroll', function() {
+        if (!triggered) {
+            var heroTop = $('.hero-section').offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+            if (windowBottom > heroTop + 100) {
+                triggered = true;
+                animateCounters();
+            }
+        }
+    });
 
 });
